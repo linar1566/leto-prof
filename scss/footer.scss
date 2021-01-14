@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .footer{
+    background: #333;
+    padding: 0 15px;
+    
+  }
+  .container{  
+  position: relative;
+  margin: 0 auto;
+  padding: 0 0; 
+  max-width: 1180px;
+  }
+  /*
+  @media (min-width: 1200px)
+  .footertop-soc {
+    margin: 23px 0 0;}
+  */
+  .footertop-soc{
+    padding: 15px;
+  }
+  .footertop{
+    display: flex;
+    justify-content: space-between;
+    padding:  30px;
+    a {
+      font: 15px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      color: #828282;
+      margin-right: 46px;
+  }
+  }
+  
+ 
+  .footertop-socsvg svg {
+      fill: #fff;
+      color: #fff;
+  }
+  .footertop-socsvg svg:hover{
+    transition: 0.3s;
+    fill: #828282;
+    color:#828282;
+  }
+  .footertop-phone a {
+    display: block;
+    font: 20px/25px MuseoSansMidle, Arial, Helvetica, sans-serif;
+    color: #fff;
+    border-bottom: none;
+  }
+  .footertop-phone a:hover{
+    color:#828282;
+    transition: 0.3s;
+  }
+  .footertop-phone li{
+    list-style-type: none;
+  }
+  .footermiddle-menu{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    text-transform: uppercase;
+    margin: 30px;
+    font: 14px/17px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  }
+  
+  .footermiddle-li a{
+    font: 14px/17px MuseoSansDark, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: none;
+  }
+  .footermiddle-li a:hover{
+    color:#828282;
+    transition: 0.3s;
+  }
+
+  .footerbottom{
+    margin: 0 auto;
+    text-align: center;
+  }
+  .footerbottom p{    
+    color: #828282;
+    margin-bottom: 20px;
+    margin-top: 55px;
+    font: 14px/17px MuseoSansNormal, Arial, Helvetica, sans-serif;    
+  }
+  
+/* Кнопка, используемая для открытия контактной формы-фиксируется в нижней части страницы */
+.open-button button {
+
+  font-size: 15px;
+  font-family: Arial, Arial;
+  font-style: normal;
+  color: rgb(240, 241, 241);
+  padding: 5px;
+  background: linear-gradient(95deg, rgb(55, 53, 53) 20%, rgb(55, 53, 53) 80%);
+  border-radius: 10px 10px 0 0;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  position: fixed;
+  bottom: 0;
+  right: 180px;
+  width: 313px;
+  z-index: 10;
+}
+.message-top {
+  height: 50px;
+  width: 250px;
+  background: linear-gradient(95deg, rgb(55, 53, 53) 20%, rgb(55, 53, 53) 80%);
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+/* Всплывающая форма-скрыта по умолчанию */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 180px;
+
+  width: 313px;
+  z-index: 10;
+}
+
+/* Добавление стилей в контейнер форм */
+.form-container {
+  max-width: 313px;
+  border-radius: 10px 10px 0 0;
+  background-color: white;
+}
+.message-top .message-close {
+  margin-left: -34px;
+  border: none;
+  background: none;
+  opacity: 0.8;
+}
+
+/* Поля ввода полной ширины */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Когда входы получают фокус, сделайте что-нибудь */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Установите стиль для кнопки отправить/кнопка */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Добавьте красный цвет фона к кнопке отмена */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Добавьте некоторые эффекты наведения на кнопки */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}

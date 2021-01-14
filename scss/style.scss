@@ -1,0 +1,873 @@
+@font-face {
+    font-family: 'MuseoSansCyrl';
+    src: url('../../fonts/MuseoSansCyrl.eot');
+    src: local('☺'), url('../../fonts/MuseoSansCyrl.woff') format('woff'), url('../fonts/MuseoSansCyrl.ttf') format('truetype'), url('../fonts/MuseoSansCyrl.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+span,
+h6,
+h5,
+h4,
+h3,
+h2,
+h1,
+a,
+p {
+    font-family: 'MuseoSansCyrl';
+}
+
+$maxWidth: 1400px;
+$minWidth: 320px;
+$maxWidthContainer: 1420;
+$md1: $maxWidthContainer+12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+@import "header";
+@import "banner";
+@import "footer";
+//Оболочка
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-family: 'MuseoSansCyrl';
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 0;
+    max-width: 1180px;
+}
+
+$fontFamily:"";
+body {
+    margin: 0 0 0 0;
+}
+
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "bl";
+    // адрес шрифта и тип 
+    src: url("../../fonts/4247.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    font-family: "bl";
+    list-style-type: none;
+    a {
+        text-decoration: none;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+.header {
+    &__top {
+        background-color: #F2F2F2;
+        height: 50px;
+    }
+    &__middle {}
+    &__bottom {}
+}
+
+.top-header {
+    &__column-tell {}
+    &__tell {}
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__column {
+        display: flex;
+    }
+    &__contacts {}
+}
+
+.addres {}
+
+.menu {
+    &__body {}
+    &__list {
+        padding: 0;
+        display: flex;
+        margin: 24px 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+       
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+        }
+    }
+    &__link {
+        font-family: Museo Sans Cyrl;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+        color: #333333;
+    }
+}
+
+.contacts-header {
+    a {
+        text-decoration: none;
+        /* Отменяем подчеркивание у ссылки */
+    }
+    &__phone {
+        color: black;
+    }
+}
+
+///////////////////////////////////////////
+.middle-header {
+    max-width: 1180px;
+    &__column {}
+}
+
+.imgmenu {
+    &__body {}
+    &__list {
+        display: flex;
+        
+        li {
+            margin: 0 10px;
+        }
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+.menu {
+    &__item {}
+}
+
+.header {
+    &__bottom {}
+}
+
+.bottom-header {
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 32px;
+    }
+    &__column {}
+    &__logo {}
+}
+
+.container {}
+
+.imgmenu {
+    &__body {}
+    &__list {
+        //640
+    }
+}
+
+.menu {
+    &__item {}
+}
+
+.d3 {
+    position: relative;
+}
+
+.bottom-header {
+    &__button {}
+}
+
+.d3 {
+    background: #ffffff;
+}
+
+.d3 form {}
+
+.d3 input,
+.d3 button {
+    border: none;
+    outline: none;
+}
+
+.d3 input {
+    width: 640px;
+    height: 48px;
+    padding-left: 16px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 24px rgba(51, 51, 51, 0.12);
+    font-family: Museo Sans Cyrl;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+
+color: #666666;
+}
+
+.d3 button {
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 11px;
+    right: 16px;
+    cursor: pointer;
+    background: none;
+}
+
+.d3 button:before {
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #3a2a02;
+}
+
+/////////////////////////////////////////////////PAGE/////////////////////////////////////////
+.sim-slider {
+    max-width: 1180px;
+    margin: 0 auto;
+    height: 380px;
+    border: 1px solid #ccd;
+    background-color: white;
+}
+.slider {
+    display: flex;
+}
+
+/* General styles */
+
+.sim-slider {
+    position: relative;
+}
+
+
+.sim-slider-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+.sim-slider-element {
+    width: 100%;
+    transition: opacity 1s ease-in;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    display: block;
+}
+
+
+/* Navigation item styles */
+
+div.sim-slider-arrow-left,
+div.sim-slider-arrow-right {
+    width: 22px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.6;
+    z-index: 4;
+  
+}
+
+div.sim-slider-arrow-left {
+    opacity: 0;
+    left: -30px;
+    top: 40%;
+    
+    display: block;
+    width: 56px;
+    height: 56px;
+    box-shadow: 0 0 24px rgba(51,51,51,.12);
+    border-radius: 100px;
+    background: #FFFFFF;
+}
+
+div.sim-slider-arrow-right {
+    opacity: 0;
+    right: -30px;
+    top: 40%;
+    background: #FFFFFF;
+    
+    display: block;
+    box-shadow: 0 0 24px rgba(51,51,51,.12);
+    width: 56px;
+    height: 56px;
+    border-radius: 100px;
+    
+}
+
+.sim-slider-arrow-right img {
+    padding: 12px;
+}
+.sim-slider-arrow-left img {
+    padding: 12px;
+}
+
+
+
+.sim-slider:hover .sim-slider-arrow-left {
+    opacity: 1.0;
+    transition: 1s;
+   
+
+}
+
+.sim-slider:not(:hover) .sim-slider-arrow-left {
+    transition: 1s;
+}
+
+.sim-slider:hover .sim-slider-arrow-right {
+    opacity: 1.0;
+    transition: 1s;
+}
+
+.sim-slider:not(:hover) .sim-slider-arrow-right {
+    transition: 1s;
+}
+
+.sim-slider-dots {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    text-align: center;
+}
+
+span.sim-dot:hover {
+    box-shadow: 0px 0px 24px rgba(177, 22, 22, 0.12);
+}
+
+span.sim-dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    padding: 0;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+//////
+.top-page {
+    &__column {}
+    &__slider {
+        
+    }
+}
+
+.page-menu {
+    &__body {
+        width: 100%;
+        max-width: 1180;
+        padding: 27.5px 0;
+        background: #333333;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    &__list {
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; //Расстояние между объектами (одинаковое расстояние)
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+            
+        }
+li {
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height, or 120% */
+    
+    text-transform: uppercase;
+    
+    /* #FFFFFF */
+    
+    color: #FFFFFF;
+}
+    }
+}
+
+.menu {
+    &__link-page {
+        color: white;
+    }
+}
+
+.sim-slider {
+    height: 423px;
+    margin-bottom: 68px;
+}
+
+.sim-slider-list {}
+
+.sim-div {}
+
+.sim-slider-element {}
+
+.sim-slider-arrow-left {}
+
+.sim-slider-arrow-right {}
+
+.sim-slider-dots {}
+
+.slider {
+    position: relative;
+}
+
+.slider-item {
+    position: relative;
+    padding: 10px 10px;
+    margin: 20px 20px;
+    height: 355px;
+    
+}
+
+.slider-item span {
+    font-family: Museo Sans Cyrl;
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 24px;
+color: #060000;
+
+}
+
+.slider-item img {
+    margin-bottom: 21px;
+}
+
+.buy {
+    display: none;
+    position: relative;
+    .buy button {
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .buy-title {
+        width: 181px;
+        height: 40px;
+        position: absolute;
+        bottom: 170px;
+        left: 15px;
+        border: 1px solid #DFE0DB;
+        background-color: #FFFFFF;
+        border-radius: 100px;
+        text-align: center;
+    }
+    .buy-title p {
+        font-family: 'MuseoSansCyrl';
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        transform: translate(18%, -50%)
+    }
+}
+.descr {
+    font-family: Museo Sans Cyrl;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 28px;
+/* or 140% */
+
+
+color: #696564;
+}
+.slider-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.slider-item:hover .buy {
+    display: block;
+    z-index: 9999;
+}
+
+button:focus {
+    outline: 0
+}
+
+.slider-item:focus {
+    outline: 0
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    box-shadow: 0px 0px 24px rgba(51, 51, 51, 0.12);
+    border-radius: 50%;
+}
+
+.slider .slick-arrow.slick-prev {
+    opacity: 0;
+    left: 0;
+    font-size: 0;
+    background: url('../img/page/prevArrow.svg') 0 0 / 100% no-repeat;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.slider .slick-arrow.slick-next {
+    opacity: 0;
+    right: 0;
+    font-size: 0;
+    background: url('../img/page/nextArrow.svg') 0 0 / 100% no-repeat;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.slider:hover .slick-arrow.slick-prev {
+    opacity: 1;
+}
+
+.slider:hover .slick-arrow.slick-next {
+    opacity: 1;
+}
+
+.slider-title-today {
+    width: 100%;
+    text-align: center;
+}
+
+.slick-slider {}
+
+
+/* Слайдер запущен */
+
+.slick-slider.slick-initialized {}
+
+
+/* Слайдер с точками */
+
+.slick-slider.slick-dotted {}
+
+
+/* Ограничивающая оболочка */
+
+.slick-list {
+    overflow: hidden;
+}
+
+
+/* Лента слайдов */
+
+.slick-track {
+    display: flex;
+}
+
+
+/* Слайд */
+
+.slick-slide {}
+
+
+/* Слайд активный (показывается) */
+
+.slick-slide.slick-active {}
+
+
+/* Слайд основной */
+
+.slick-slide.slick-current {}
+
+
+/* Слайд по центру */
+
+.slick-slide.slick-center {}
+
+
+/* Клонированный слайд */
+
+.slick-slide.slick-cloned {}
+
+
+/* Стрелка */
+
+.slick-arrow {}
+
+
+/* Стрелка влево */
+
+.slick-arrow.slick-prev {}
+
+
+/* Стрелка вправо */
+
+.slick-arrow.slick-next {}
+
+
+/* Стрелка не активная */
+
+.slick-arrow.slick-disabled {}
+
+
+/* Точки (булиты) */
+
+.slick-dots {}
+
+.slick-dots li {}
+
+
+/* Активная точка */
+
+.slick-dots li.slick-active {}
+
+
+/* Элемент точки */
+
+.slick-dots li button {}
+
+//////////Кнопка покупки товара
+.buys {
+    width: 230px;
+    padding: 10px 0;
+    text-decoration: none;
+    
+    color: #FFFFFF;
+    text-align: center;
+   
+    display: block;
+    margin: 15px 10px 0 0;
+    font-family: Museo Sans Cyrl;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+}
+
+
+.buys:not(.active) {
+    background: #000000;
+    border:none;
+    border-radius: 2px;
+}
+
+.buys:not(.active):hover,
+.buys:not(.active):focus {
+    transition: color 200ms linear, text-shadow 500ms linear;
+    color: #fff;
+    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
+}
+
+.buys:not(:hover) {
+    transition: 0.6s;
+}
+
+.slider-title {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 38px;
+    
+}
+.slider-title h2 {
+    font-family: Museo Sans Cyrl;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 48px;
+/* identical to box height */
+
+
+color: #666666;
+}
+.slider-title-today h2 {
+    font-family: Museo Sans Cyrl;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 48px;
+/* identical to box height */
+
+
+color: #666666;
+}
+
+.slider-subtitle h2,h3 {
+    font-family: Museo Sans Cyrl;
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 24px;
+/* identical to box height, or 86% */
+
+
+/* #333333 */
+
+color: #333333;
+}
+
+.slider-subtitle {
+ display: flex;
+ justify-content: space-between;
+}
+
+.slider-subtitle a {
+    font-family: Museo Sans Cyrl;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height, or 120% */
+}
+.block-new {
+    display: flex;
+    width: 500px;
+    height: 400px;
+    border: 1px solid black;
+}
+
+.block-item {
+    display: flex;
+    background: #000000;
+    width: 500px;
+    border: 1px solid black;
+    height: 400px;
+}
+
+/* #6D103D */
+
+
+//////////////////Бренды
+.slider-brands {
+    height: 130px;
+    box-shadow: 0px 0px 24px rgba(51, 51, 51, 0.12);
+}
+
+.slider-item__brands {
+    position: relative;
+    padding: 10px 10px;
+    margin: 20px 20px;
+    height: 72px;
+    a:link,
+    a:visited,
+    a:hover,
+    a:focus,
+    a:active {
+        border: 0;
+        outline: 0;
+    }
+}
+h2 {
+    font-family: Museo Sans Cyrl;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 48px;
+margin: 40px 0;
+
+
+color: #666666;
+}
+///////////////////////////Преимущества
+.main_advantages {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 185px;
+    margin: 80px 0;
+    
+    max-width: 1180px;
+}
+
+.main_advantage_single {
+    width: calc(25% - 30px);
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main_advantage_single img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.main_advantage_single h3 {
+    font-size: 19px;
+    line-height: 20px;
+    color: black;
+    margin: 0;
+}
+
+
+.main_advantage_single p {
+    line-height: 17px;
+}
+
+///////////Хлебная крошка
+.Leto-text span {
+    color: #666666;
+    text-transform: uppercase;
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 48px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+}
+
+
+/* Стиль списка */
+
+ul.breadcrumb {
+    // padding: 10px 16px; 
+    background-color: rgb(184, 23, 23);
+}
+
+
+/* Отображение элементов списка бок о бок */
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+
+/* Добавить символ косой черты (/) перед/за каждым элементом списка */
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}

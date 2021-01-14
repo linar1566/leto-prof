@@ -1,0 +1,53 @@
+header {
+    background: #f2f2f2;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1180px;
+    padding: 16.5px 0px;
+    margin: auto;
+}
+
+.container-header ul a {
+    margin: 0px 10px;
+}
+.phone-number a {
+    margin: 0 5px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+header span {
+ 
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #333333;
+      
+}
+
+header a {
+    
+    font-family: Museo Sans Cyrl;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+color: #333333;
+    
+}
+header .phone {
+    text-decoration: none;
+    
+    margin-left: 15px;
+    
+}
+.phone {
+    display: flex;
+}
